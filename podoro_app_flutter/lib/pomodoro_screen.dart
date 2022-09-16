@@ -20,7 +20,9 @@ class PomodoroScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.redAccent,
       ),
-      body: Container(),
+      body: Container(
+        child: Text("Parent Container "),
+      ),
     );
   }
 }
