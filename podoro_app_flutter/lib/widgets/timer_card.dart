@@ -25,8 +25,11 @@ class TimerCard extends StatelessWidget {
             timerContainer(context, "10"),
             Text(
               ":",
-              style:
-                  textStyle(70, Colors.white.withOpacity(0.5), FontWeight.bold),
+              style: textStyle(
+                70,
+                Colors.white.withOpacity(0.5),
+                FontWeight.bold,
+              ),
             ),
             timerContainer(context, "00"),
           ],

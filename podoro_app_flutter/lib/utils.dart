@@ -8,3 +8,17 @@ TextStyle textStyle(double size, Color color, FontWeight fw) {
     fontWeight: fw,
   );
 }
+
+List selectableTime = [
+  "300",
+  "600",
+  "900",
+  "1200",
+  "1500",
+  "1800",
+  "2100",
+  "2400",
+  "3000",
+  "3300",
+  "3600",
+];
