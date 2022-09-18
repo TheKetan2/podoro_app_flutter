@@ -7,6 +7,7 @@ class PomodoroScreen extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.redAccent,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -19,9 +20,28 @@ class PomodoroScreen extends StatelessWidget {
         ),
         elevation: 0,
         backgroundColor: Colors.redAccent,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.refresh,
+              color: Colors.white,
+              size: 40,
+            ),
+          )
+        ],
       ),
-      body: Container(
-        child: const Text("Parent Container"),
+      body: SingleChildScrollView(
+        child: Container(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 15,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
