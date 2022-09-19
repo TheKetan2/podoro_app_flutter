@@ -13,7 +13,7 @@ class TimeOptions extends StatelessWidget {
             .map(
               (e) => Container(
                 alignment: Alignment.center,
-                margin: EdgeInsets.only(top: 10, left: 10),
+                margin: const EdgeInsets.only(top: 10, left: 10),
                 width: 50,
                 height: 70,
                 decoration: BoxDecoration(
