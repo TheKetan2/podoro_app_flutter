@@ -11,22 +11,23 @@ class TimeOptions extends StatelessWidget {
       child: Row(
         children: selectableTime
             .map(
-              (e) => Container(
+              (time) => Container(
                 alignment: Alignment.center,
                 margin: const EdgeInsets.only(top: 10, left: 10),
-                width: 50,
-                height: 70,
+                width: 70,
+                height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(
-                    10,
+                    5,
                   ),
-                  color: Colors.white,
+                  border: Border.all(width: 3, color: Colors.red),
+                  color: Colors.redAccent,
                 ),
                 child: Text(
-                  (int.parse(e) / 60).toStringAsFixed(0),
+                  (int.parse(time) ~/ 60).toString(),
                   style: textStyle(
                     20,
-                    Colors.redAccent,
+                    Colors.white,
                     FontWeight.bold,
                   ),
                 ),
