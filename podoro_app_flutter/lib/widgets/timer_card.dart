@@ -27,7 +27,7 @@ class TimerCard extends StatelessWidget {
           children: [
             timerBoxWidget(
                 context,
-                (provider.currentDuration ~/ 60).toInt() == 10
+                (provider.currentDuration ~/ 60).toInt().toString().length == 1
                     ? "0${(provider.currentDuration ~/ 60).toInt()}"
                     : (provider.currentDuration ~/ 60).toInt().toString()),
             const SizedBox(
@@ -35,14 +35,19 @@ class TimerCard extends StatelessWidget {
             ),
             Text(
               ":",
-              style: textStyle(60, Colors.white54, FontWeight.bold),
+              style: textStyle(
+                  60,
+                  provider.currentDuration % 2 == 0
+                      ? Colors.white60
+                      : Colors.white,
+                  FontWeight.bold),
             ),
             const SizedBox(
               width: 10,
             ),
             timerBoxWidget(
                 context,
-                (provider.currentDuration % 60).toInt() < 10
+                (provider.currentDuration % 60).toInt().toString().length == 1
                     ? "0${(provider.currentDuration % 60).toInt()}"
                     : (provider.currentDuration % 60).toInt().toString()),
           ],
