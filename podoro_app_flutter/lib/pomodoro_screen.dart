@@ -1,10 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:podoro_app_flutter/widgets/progress_widget.dart';
 import 'package:podoro_app_flutter/widgets/time_controller.dart';
 import 'package:podoro_app_flutter/widgets/time_options.dart';
 import 'package:podoro_app_flutter/widgets/timer_card.dart';
+import 'package:podoro_app_flutter/widgets/timerservice.dart';
 //import 'package:podoro_app_flutter/widgets/time_options.dart';
-//import 'package:provider/provider.dart';
+import 'package:provider/provider.dart';
 import 'utils.dart';
 
 class PomodoroScreen extends StatelessWidget {
