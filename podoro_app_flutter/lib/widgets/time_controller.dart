@@ -14,14 +14,14 @@ class _TimeControllerState extends State<TimeController> {
       alignment: Alignment.center,
       width: 100,
       height: 100,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.black26,
         shape: BoxShape.circle,
       ),
       child: Center(
         child: IconButton(
           iconSize: 55,
-          icon: Icon(Icons.pause),
+          icon: const Icon(Icons.pause),
           color: Colors.white,
           onPressed: () {},
         ),
