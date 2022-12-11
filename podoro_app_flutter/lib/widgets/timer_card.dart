@@ -22,23 +22,28 @@ class TimerCard extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            timerContainer(context, "10"),
+            timerBoxWidget(context, "10"),
+            SizedBox(
+              width: 10,
+            ),
             Text(
               ":",
-              style: textStyle(
-                70,
-                Colors.white.withOpacity(0.5),
-                FontWeight.bold,
-              ),
+              style: textStyle(60, Colors.white54, FontWeight.bold),
             ),
-            timerContainer(context, "00"),
+            SizedBox(
+              width: 10,
+            ),
+            timerBoxWidget(context, "10"),
           ],
         )
       ],
     );
   }
 
-  Container timerContainer(BuildContext context, String text) {
+  Container timerBoxWidget(
+    BuildContext context,
+    String text,
+  ) {
     return Container(
       alignment: Alignment.center,
       width: MediaQuery.of(context).size.width / 3.2,
@@ -58,7 +63,11 @@ class TimerCard extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: textStyle(70, Colors.redAccent, FontWeight.bold),
+        style: textStyle(
+          80,
+          Colors.redAccent,
+          FontWeight.bold,
+        ),
       ),
     );
   }
